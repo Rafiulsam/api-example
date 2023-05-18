@@ -1,9 +1,9 @@
-const defaultData = () => {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s')
-        .then(res => res.json())
-        .then(data => displayMeals(data.meals))
-}
-defaultData()
+// const defaultData = () => {
+//     fetch('https://www.themealdb.com/api/json/v1/1/search.php?s')
+//         .then(res => res.json())
+//         .then(data => displayMeals(data.meals))
+// }
+// defaultData()
 
 const loadMeals = (searchText) => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
@@ -11,7 +11,7 @@ const loadMeals = (searchText) => {
         .then(res => res.json())
         .then(data => displayMeals(data.meals))
 }
-
+loadMeals('')
 
 const displayMeals = meals => {
     const mealsContainer = document.getElementById('meals-container')
